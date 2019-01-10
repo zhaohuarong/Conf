@@ -1,10 +1,15 @@
 QT -= gui
+QT += network
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
 DESTDIR = $$PWD/../bin
 OBJECTS_DIR = $$PWD/../obj
+
+INCLUDEPATH += $$PWD/../Network
+
+LIBS += -L$$PWD/../bin -lNetwork
 
 DEFINES += QT_DEPRECATED_WARNINGS
 

@@ -13,11 +13,15 @@ OBJECTS_DIR = $$PWD/../obj
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
-        network.cpp
+        network.cpp \
+    tcpserver.cpp \
+    tcpclient.cpp
 
 HEADERS += \
         network.h \
-        network_global.h 
+        network_global.h \ 
+    tcpserver.h \
+    tcpclient.h
 
 unix {
     target.path = /usr/lib
