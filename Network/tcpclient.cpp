@@ -18,6 +18,6 @@ void TCPClient::connectToHost(const QString &address, quint16 port)
 {
     if(m_pSocket == nullptr)
         return;
-    m_pSocket->connectToHost(address, port);
+    m_pSocket->connectToHost(QHostAddress::LocalHost, port);
     qDebug() << QString("connect to %1:%2").arg(address).arg(port);
 }

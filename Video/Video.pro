@@ -13,11 +13,13 @@ OBJECTS_DIR = $$PWD/../obj
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
-        video.cpp
+        video.cpp \
+    usbcamera.cpp
 
 HEADERS += \
         video.h \
-        video_global.h 
+        video_global.h \ 
+    usbcamera.h
 
 unix {
     target.path = /usr/lib

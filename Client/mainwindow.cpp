@@ -8,8 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //TCPClient *c = new TCPClient();
-    //c->connectToHost("localhost", 5555);
+    TCPClient *c = new TCPClient();
+    c->connectToHost("localhost", 6666);
 }
 
 MainWindow::~MainWindow()

@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     TCPServer *s = new TCPServer();
-    s->listen();
+    qDebug() << "listen : " << s->listen(QHostAddress::Any, 6666);
 
     return a.exec();
 }

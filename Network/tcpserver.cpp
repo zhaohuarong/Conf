@@ -29,7 +29,8 @@ void TCPServer::onNewConnection()
     QTcpSocket *pSocket = m_pServer->nextPendingConnection();
     if(pSocket != nullptr && pSocket->isValid())
     {
-        m_mapSocket.insert(QString("%1:%2").arg(pSocket->peerAddress().toString()).arg(pSocket->peerPort()), pSocket);
-        qDebug() << "new connection";
+		QString key = QString("%1:%2").arg(pSocket->peerAddress().toString()).arg(pSocket->peerPort());
+        m_mapSocket.insert(key, pSocket);
+        qDebug() << key << " connected";
     }
 }
