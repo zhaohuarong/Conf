@@ -16,6 +16,12 @@ class VIDEOSHARED_EXPORT USBCamera : public QObject
 public:
     explicit USBCamera(QObject *parent = nullptr);
 
+public slots:
+    void start();
+
+signals:
+    void sigImage(const QImage &img);
+
 private slots:
     void detectBarcodes(QVideoFrame frame);
 

@@ -1,4 +1,4 @@
-QT       += core gui network
+QT       += core gui network multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -7,9 +7,9 @@ TEMPLATE = app
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
-INCLUDEPATH += $$PWD/../Network
+INCLUDEPATH += $$PWD/../Network $$PWD/../Video $$PWD/../Framework
 
-LIBS += -L$$PWD/../bin -lNetwork
+LIBS += -L$$PWD/../bin -lNetwork -lVideo -lFramework
 
 DESTDIR = $$PWD/../bin
 OBJECTS_DIR = $$PWD/../obj

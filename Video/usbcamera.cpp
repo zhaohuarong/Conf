@@ -1,5 +1,6 @@
 #include <QBuffer>
 #include <QPainter>
+//#include <QCoreApplication>
 #include <QVideoProbe>
 #include <QDebug>
 #include <QCamera>
@@ -23,7 +24,10 @@ USBCamera::USBCamera(QObject *parent) :
     {
         connect(m_pVideoProbe, SIGNAL(videoFrameProbed(QVideoFrame)), this, SLOT(detectBarcodes(QVideoFrame)));
     }
+}
 
+void USBCamera::start()
+{
     m_pCamera->start();
 }
 
@@ -31,6 +35,7 @@ void USBCamera::detectBarcodes(QVideoFrame frame)
 {
     //qDebug() << "frame" << frame.size();
     QImage img = imageFromVideoFrame(frame);
+    emit sigImage(img);
     //memcpy(m_pImage->bits(), img.bits(), static_cast<size_t>(img.sizeInBytes()));
     //update();
     //m_nFramePerSecond ++;
@@ -44,6 +49,7 @@ void USBCamera::detectBarcodes(QVideoFrame frame)
     buffer.reset();
     buffer.close();
     ///////////////////// test size
+	//qApp->processEvents();
 }
 
 QImage USBCamera::imageFromVideoFrame(const QVideoFrame& buffer) const

@@ -1,4 +1,4 @@
-QT       -= gui
+QT       += core gui widgets
 
 TARGET = Framework
 TEMPLATE = lib
@@ -11,11 +11,13 @@ DESTDIR = $$PWD/../bin
 OBJECTS_DIR = $$PWD/../obj
 
 SOURCES += \
-        framework.cpp
+        framework.cpp \
+    imageview.cpp
 
 HEADERS += \
         framework.h \
-        framework_global.h 
+        framework_global.h \ 
+    imageview.h
 
 unix {
     target.path = /usr/lib

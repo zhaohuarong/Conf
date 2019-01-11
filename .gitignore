@@ -10,6 +10,18 @@
 *.dylib
 *.exe
 lib*.a
+*.vcxproj
+*.user
+*.filters
+bin
+obj
+.vs
+*.sln
+*.db
+*.opendb
+*/debug
+*/release
+*/x64
 
 # Qt-es
 object_script.*.Release
