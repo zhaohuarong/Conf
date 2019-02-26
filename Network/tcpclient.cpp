@@ -21,3 +21,10 @@ void TCPClient::connectToHost(const QString &address, quint16 port)
     m_pSocket->connectToHost(QHostAddress::LocalHost, port);
     qDebug() << QString("connect to %1:%2").arg(address).arg(port);
 }
+
+void TCPClient::write(const char *p, qint64 len)
+{
+    if(m_pSocket == nullptr)
+        return;
+    m_pSocket->write(p, len);
+}

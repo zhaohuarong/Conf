@@ -35,4 +35,3 @@ void ImageView::paintEvent(QPaintEvent *e)
     QPainter painter(this);
     painter.drawImage(rect(), *m_pImage, QRect(QPoint(0, 0), m_pImage->size()));
 }
-

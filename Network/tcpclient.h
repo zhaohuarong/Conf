@@ -17,6 +17,9 @@ public:
 
     void connectToHost(const QString &address, quint16 port);
 
+
+    void write(const char *p, qint64 len);
+
 private:
     QTcpSocket *m_pSocket;
 };

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>510</width>
-    <height>368</height>
+    <width>1013</width>
+    <height>658</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,11 +17,23 @@
    <widget class="ImageView" name="localView" native="true">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>120</y>
-      <width>120</width>
-      <height>80</height>
+      <x>30</x>
+      <y>30</y>
+      <width>384</width>
+      <height>208</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>384</width>
+      <height>208</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>384</width>
+      <height>208</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -30,8 +42,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>510</width>
-     <height>22</height>
+     <width>1013</width>
+     <height>23</height>
     </rect>
    </property>
   </widget>

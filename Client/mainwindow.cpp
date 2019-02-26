@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     c->connectToHost("localhost", 6666);
 
     USBCamera *pCamera = new USBCamera(this);
-    pCamera->start();
+    //pCamera->start();
 
     connect(pCamera, SIGNAL(sigImage(QImage)), ui->localView, SLOT(setImage(QImage)));
 }

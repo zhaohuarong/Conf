@@ -80,7 +80,7 @@ QImage USBCamera::imageFromVideoFrame(const QVideoFrame& buffer) const
 void USBCamera::setCameraProp()
 {
     QCameraViewfinderSettings set;
-    QSize size(1280, 720);
+    QSize size(640, 360);
     set.setResolution(size);
     //setGeometry(0, 0, size.width(), size.height());
     m_pCamera->setViewfinderSettings(set);
